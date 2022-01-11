@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
 
   const images = withArtDirection(getImage(data.largeImage), [
     {
-      media: "(max-width: 760px)",
+      media: "(max-width: 415px)",
       image: getImage(data.smallImage),
     },
   ]);
@@ -33,28 +33,12 @@ const IndexPage = ({ data }) => {
       <section className="hero">
         <div className="container hero-content">
           <div className="wrapper">
-            <h1>Teleradiologia</h1>
-            <p>Diagnoza na odległość.</p>
             
-          </div>
-        </div>
-        <div className="hero-img">
-          <GatsbyImage image={images} alt="radiology" />
-        </div>
-      </section>
-      <section className="price-section">
-        <div className="container">
-          <div className="wrapper">
-            <div className="price-box">
-              <h2>Tabela z cenami</h2>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <div className="wrapper">
-          <div className="form-box">
+            <div className="hero-container">
+              <div><h1>Teleradiologia</h1>
+            <p>Diagnoza na odległość.</p></div>
+            <div>
+            <div className="form-box">
                   <div className="form">
                     <div className="form-wrapper">
                       <h2>
@@ -85,9 +69,48 @@ const IndexPage = ({ data }) => {
                   </div>
                   <img src={boxShadow} />
                 </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div className="hero-img">
+          <GatsbyImage image={images} alt="radiology" />
+        </div>
+      </section>
+      <section className="price-section">
+        <div className="container">
+          <div className="wrapper">
+            <div className="pricebox-wrapper">
+            <div className="price-box">
+              <h2>Tabela z cenami</h2>
+              <div className="table">
+                <div className="table-header">
+                  <span>Badanie</span>
+                  <span>Cena</span>
+                </div>
+                <div className="table-body">
+                  <span>Echocardiogram</span>
+                  <span>200 PLN</span>
+                  <span>MRI (Magnetic Resonance Imaging)</span>
+                  <span>200 PLN</span>
+                  <span>Ultrasound</span>
+                  <span>200 PLN</span>
+                  <span>X-Ray</span>
+                  <span>100 PLN</span>
+                  <span>PET/CT (Positron Emission Tomography/Computed Tomography)</span>
+                  <span>250 PLN</span>
+                  <span>Radiology Overread Services For Medical Diagnostic and Legal Overreads</span>
+                  <span>350 PLN</span>
+                </div>
+              </div>
+            </div>
+            <img src={boxShadow} />
+            </div>
+            
           </div>
         </div>
       </section>
+      
       <footer className="background-gradient">
         <div className="container">
           <div className="wrapper"></div>
