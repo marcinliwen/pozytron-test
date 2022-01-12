@@ -69,21 +69,21 @@ const IndexPage = ({ data }) => {
                       >
                         <div className="form-item">
                           <label>Imię</label>
-                          <input type="text" name="name" required />
+                          <input type="text" name="first_name"  required />
                         </div>
                         <div className="form-item">
                           <label>Nazwisko</label>
-                          <input type="text" name="surname" required />
+                          <input type="text" name="last_name" required />
                         </div>
                         <div className="form-item">
                           <label>Telefon</label>
-                          <input type="text" name="phone" required />
+                          <input type="text" name="custom_phone" required />
                         </div>
                         <div className="form-item">
                           <label>Email</label>
                           <input type="text" name="email" required />
                         </div>
-
+                        <input type="hidden" name="thankyou_url" value="https://pozytron-test.netlify.app?t=1"/>
                         <input
                           type="hidden"
                           name="campaign_token"

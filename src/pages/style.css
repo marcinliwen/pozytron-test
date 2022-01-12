@@ -132,6 +132,7 @@ input {
 }
 input:focus {
   outline: -webkit-focus-ring-color auto 1px;
+  outline-offset: 1px;
 }
 .form-item {
   display: flex;
@@ -242,6 +243,9 @@ input:focus {
 }
 .section {
   padding: 50px 0;
+}
+.section ul {
+  padding-right: 15px;
 }
 @media (min-width: 770px) {
   .img-logo {
