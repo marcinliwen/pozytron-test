@@ -33,22 +33,39 @@ const IndexPage = ({ data }) => {
       <section className="hero">
         <div className="container hero-content">
           <div className="wrapper">
-            
+          <h1>ZDALNE OPISYWANIE CYFROWYCH ZDJĘĆ STOMATOLOGICZNYCH
+</h1>
             <div className="hero-container">
-              <div><h1>Teleradiologia</h1>
-            <p>Diagnoza na odległość.</p></div>
+              <div>
+            <p>Nie musisz zatrudniać radiologa do opisu zdjęć. Skorzystaj z usług zdalnej teleradiologii!
+Bądź profesjonalny i wyprzedź konkurencję!
+</p></div>
             <div>
             <div className="form-box">
                   <div className="form">
                     <div className="form-wrapper">
                       <h2>
-                        Zapisz się do newslettera <br /> i dowiedz się więcej.
+                      Zostaw nam dane kontaktowe. <br />
+Zwrotnie otrzymasz ofertę i cennik.
+
                       </h2>
                       <form
                         action="https://app.getresponse.com/add_subscriber.html"
                         accept-charset="utf-8"
                         method="post"
                       >
+                        <div className="form-item">
+                          <label>Imię</label>
+                          <input type="text" name="name" required />
+                        </div>
+                        <div className="form-item">
+                          <label>Nazwisko</label>
+                          <input type="text" name="surname" required />
+                        </div>
+                        <div className="form-item">
+                          <label>Telefon</label>
+                          <input type="text" name="phone" required />
+                        </div>
                         <div className="form-item">
                           <label>Email</label>
                           <input type="text" name="email" required />
@@ -75,6 +92,30 @@ const IndexPage = ({ data }) => {
         </div>
         <div className="hero-img">
           <GatsbyImage image={images} alt="radiology" />
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="wrapper">
+          <h2>Korzyści które uzyskasz z wdrożenia modułu Teleradiologii:</h2>
+<ul>
+  <li>Przygotujemy dla Ciebie wszystkie dokumenty do WSSE wymagane przepisami prawa (procedury szczegółowe, dokumenty uprawniające do opisu zdjęć, test specjalistyczne urządzeń peryferyjnych).
+</li>
+<li>Otrzymasz dostęp do aplikacji szyfrowanego przesyłania zdjęć w formacie DICOM.
+</li>
+<li>Spełnisz wymogi prawa w zakresie posiadania umowy z lekarzem radiologiem w obszarze oceny radiologicznej wykonywanych badań obrazowych.
+</li>
+<li>Uzyskasz możliwość wysłania i konsultacji wykonanego badania z lekarzem radiologiem bezpośrednio w systemie.
+</li>
+<li>Będziesz mieć możliwość tworzenia kont dla podmiotów z Tobą współpracujących / lekarzy kierujących pacjentów na diagnostykę obrazową stomatologiczną (funkcja systemu RIS umożliwiająca wystawienie zlecenia, przesłanie go do placówki wykonującej badanie radiologiczne wraz ze zwrotnym odesłaniem wykonanych obrazów w czasie rzeczywistym); 
+</li>
+<li>Możliwość archiwizacji wykonywanych badań w systemie PACS stanowiącym integralną część modułu teleradiologicznego (brak konieczności posiadania własnych serwerów).
+</li>
+<li>Możliwość zarządzania wszystkimi pacjentami oraz wykonanymi badaniami obrazowymi dzięki funkcji systemu RIS.
+</li>
+</ul>
+
+          </div>
         </div>
       </section>
       <section className="price-section">
@@ -124,14 +165,14 @@ export default IndexPage;
 
 export const data = graphql`
   query {
-    largeImage: file(relativePath: { eq: "hero-desctop.png" }) {
+    largeImage: file(relativePath: { eq: "dental-desktop.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
       }
     }
-    smallImage: file(relativePath: { eq: "hero-mobile.png" }) {
+    smallImage: file(relativePath: { eq: "dental-mobile.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
       }
     }
   }

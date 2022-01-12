@@ -29,24 +29,18 @@ footer {
   height: 65px;
 }
 h1 {
-  font-size: 3rem;
-  line-height: 3.5rem;
-  color: #fff;
-  text-shadow: 1px 2px black;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-bottom: 0;
 }
 .hero-container p {
-    color: #fff;
-    text-shadow: 1px 2px black;
-    font-size: 1.25rem;
-    line-height: 2rem;
     margin-bottom: 3rem;
     padding-right: 30px;
 }
 
 h2 {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .container {
   width: 100%;
@@ -66,7 +60,7 @@ main {
   height: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 65px 1fr 1fr 65px;
+  grid-template-rows: 65px 1fr 1fr 1fr 65px;
 }
 .hero {
   position: relative;
@@ -82,7 +76,7 @@ main {
   transition: all 1000ms ease-in-out;
 }
 .form-box {
-  max-width: 390px;
+  max-width: 466px;
   opacity: 0;
   transition: all 1300ms ease-in-out;
 }
@@ -113,7 +107,7 @@ label {
   font-family: "Roboto";
   line-height: 150%;
   font-weight: 300;
-  width: 35px;
+  width: 80px;
   font-size: 14px;
   color: #3d7088;
 }
@@ -132,7 +126,7 @@ input:focus {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .btn {
   width: 132px;
@@ -164,14 +158,14 @@ input:focus {
 }
 
 .hero-container > div {
-  flex: 1;
 }
 .hero-img {
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
   z-index: -1;
+  opacity: 0.4;
 }
 .hero-img .gatsby-image-wrapper {
   height: 100%;
@@ -186,10 +180,9 @@ input:focus {
     padding: 50px 0;
 }
 .hero p {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-shadow: 1px 1px black;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
 }
 .form-box {
   margin-left: auto;
@@ -236,15 +229,6 @@ input:focus {
   .img-logo {
     max-width: 308px;
   }
-  label {
-    padding: 0 10px;
-  }
-  .form-item {
-    flex-wrap: nowrap;
-  }
-  .hero-container {
-    flex-wrap: nowrap;
-  }
   .hero {
     padding: 60px 0;
   }
@@ -253,13 +237,19 @@ input:focus {
     margin-top: 3rem;
 }
   h1 {
-    font-size: 5rem;
-    line-height: 5.5rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
     margin-bottom: 1rem;
   }
   h2 {
-    font-size: 2rem;
-    line-height: 2.4rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     
   }
+  .hero-container > div {flex: 1;}
+
+.hero p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
 }
