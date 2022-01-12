@@ -23,7 +23,10 @@ html {
   line-height: 150%;
   height: 100%;
 }
-
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
 header,
 footer {
   height: 65px;
@@ -32,6 +35,12 @@ h1 {
   font-size: 1.5rem;
   line-height: 2rem;
   margin-bottom: 0;
+  margin-top: 0;
+}
+.hero .hero-title {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
 }
 .hero-container p {
   margin-bottom: 3rem;
@@ -118,6 +127,8 @@ input {
   height: 30px;
   padding: 1px 2px;
   max-width: 100%;
+  border: 1px solid rgb(118, 118, 118);
+    border-radius: 3px;
 }
 input:focus {
   outline: -webkit-focus-ring-color auto 1px;
@@ -253,11 +264,15 @@ input:focus {
     font-size: 3rem;
     line-height: 3.5rem;
     margin-bottom: 1rem;
+    margin-top: 0;
   }
   h2 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+  .hero .hero-title {
+    font-size: 2rem;
+}
   .hero-container > div {
     flex: 1;
   }

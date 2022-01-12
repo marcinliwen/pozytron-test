@@ -44,6 +44,7 @@ const IndexPage = ({ data }) => {
       <section className="hero">
         <div className="container hero-content">
           <div className="wrapper">
+            <p className="hero-title">Teleradiologia</p>
             <h1>ZDALNE OPISYWANIE CYFROWYCH ZDJĘĆ STOMATOLOGICZNYCH</h1>
             <div className="hero-container">
               <div>
