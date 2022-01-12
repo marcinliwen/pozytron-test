@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
                           <label>Email</label>
                           <input type="text" name="email" required />
                         </div>
-                        <input type="hidden" name="thankyou_url" value="https://pozytron-test.netlify.app?t=1"/>
+                        <input type="hidden" name="thankyou_url" value="https://pozytron-test.netlify.app"/>
                         <input
                           type="hidden"
                           name="campaign_token"
