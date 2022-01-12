@@ -33,21 +33,22 @@ const IndexPage = ({ data }) => {
       <section className="hero">
         <div className="container hero-content">
           <div className="wrapper">
-          <h1>ZDALNE OPISYWANIE CYFROWYCH ZDJĘĆ STOMATOLOGICZNYCH
-</h1>
+            <h1>ZDALNE OPISYWANIE CYFROWYCH ZDJĘĆ STOMATOLOGICZNYCH</h1>
             <div className="hero-container">
               <div>
-            <p>Nie musisz zatrudniać radiologa do opisu zdjęć. Skorzystaj z usług zdalnej teleradiologii!
-Bądź profesjonalny i wyprzedź konkurencję!
-</p></div>
-            <div>
-            <div className="form-box">
+                <p>
+                  Nie musisz zatrudniać radiologa do opisu zdjęć. Skorzystaj z
+                  usług zdalnej teleradiologii! Bądź profesjonalny i wyprzedź
+                  konkurencję!
+                </p>
+              </div>
+              <div>
+                <div className="form-box">
                   <div className="form">
                     <div className="form-wrapper">
                       <h2>
-                      Zostaw nam dane kontaktowe. <br />
-Zwrotnie otrzymasz ofertę i cennik.
-
+                        Zostaw nam dane kontaktowe. <br />
+                        Zwrotnie otrzymasz ofertę i cennik.
                       </h2>
                       <form
                         action="https://app.getresponse.com/add_subscriber.html"
@@ -86,7 +87,7 @@ Zwrotnie otrzymasz ofertę i cennik.
                   </div>
                   <img src={boxShadow} />
                 </div>
-            </div>
+              </div>
             </div>
           </div>
         </div>
@@ -94,27 +95,47 @@ Zwrotnie otrzymasz ofertę i cennik.
           <GatsbyImage image={images} alt="radiology" />
         </div>
       </section>
-      <section>
+      <section className="section">
         <div className="container">
           <div className="wrapper">
-          <h2>Korzyści które uzyskasz z wdrożenia modułu Teleradiologii:</h2>
-<ul>
-  <li>Przygotujemy dla Ciebie wszystkie dokumenty do WSSE wymagane przepisami prawa (procedury szczegółowe, dokumenty uprawniające do opisu zdjęć, test specjalistyczne urządzeń peryferyjnych).
-</li>
-<li>Otrzymasz dostęp do aplikacji szyfrowanego przesyłania zdjęć w formacie DICOM.
-</li>
-<li>Spełnisz wymogi prawa w zakresie posiadania umowy z lekarzem radiologiem w obszarze oceny radiologicznej wykonywanych badań obrazowych.
-</li>
-<li>Uzyskasz możliwość wysłania i konsultacji wykonanego badania z lekarzem radiologiem bezpośrednio w systemie.
-</li>
-<li>Będziesz mieć możliwość tworzenia kont dla podmiotów z Tobą współpracujących / lekarzy kierujących pacjentów na diagnostykę obrazową stomatologiczną (funkcja systemu RIS umożliwiająca wystawienie zlecenia, przesłanie go do placówki wykonującej badanie radiologiczne wraz ze zwrotnym odesłaniem wykonanych obrazów w czasie rzeczywistym); 
-</li>
-<li>Możliwość archiwizacji wykonywanych badań w systemie PACS stanowiącym integralną część modułu teleradiologicznego (brak konieczności posiadania własnych serwerów).
-</li>
-<li>Możliwość zarządzania wszystkimi pacjentami oraz wykonanymi badaniami obrazowymi dzięki funkcji systemu RIS.
-</li>
-</ul>
-
+            <h2>Korzyści które uzyskasz z wdrożenia modułu Teleradiologii:</h2>
+            <ul>
+              <li>
+                Przygotujemy dla Ciebie wszystkie dokumenty do WSSE wymagane
+                przepisami prawa (procedury szczegółowe, dokumenty uprawniające
+                do opisu zdjęć, test specjalistyczne urządzeń peryferyjnych).
+              </li>
+              <li>
+                Otrzymasz dostęp do aplikacji szyfrowanego przesyłania zdjęć w
+                formacie DICOM.
+              </li>
+              <li>
+                Spełnisz wymogi prawa w zakresie posiadania umowy z lekarzem
+                radiologiem w obszarze oceny radiologicznej wykonywanych badań
+                obrazowych.
+              </li>
+              <li>
+                Uzyskasz możliwość wysłania i konsultacji wykonanego badania z
+                lekarzem radiologiem bezpośrednio w systemie.
+              </li>
+              <li>
+                Będziesz mieć możliwość tworzenia kont dla podmiotów z Tobą
+                współpracujących / lekarzy kierujących pacjentów na diagnostykę
+                obrazową stomatologiczną (funkcja systemu RIS umożliwiająca
+                wystawienie zlecenia, przesłanie go do placówki wykonującej
+                badanie radiologiczne wraz ze zwrotnym odesłaniem wykonanych
+                obrazów w czasie rzeczywistym);
+              </li>
+              <li>
+                Możliwość archiwizacji wykonywanych badań w systemie PACS
+                stanowiącym integralną część modułu teleradiologicznego (brak
+                konieczności posiadania własnych serwerów).
+              </li>
+              <li>
+                Możliwość zarządzania wszystkimi pacjentami oraz wykonanymi
+                badaniami obrazowymi dzięki funkcji systemu RIS.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -122,36 +143,55 @@ Zwrotnie otrzymasz ofertę i cennik.
         <div className="container">
           <div className="wrapper">
             <div className="pricebox-wrapper">
-            <div className="price-box">
-              <h2>Tabela z cenami</h2>
-              <div className="table">
-                <div className="table-header">
-                  <span>Badanie</span>
-                  <span>Cena</span>
-                </div>
-                <div className="table-body">
-                  <span>Echocardiogram</span>
-                  <span>200 PLN</span>
-                  <span>MRI (Magnetic Resonance Imaging)</span>
-                  <span>200 PLN</span>
-                  <span>Ultrasound</span>
-                  <span>200 PLN</span>
-                  <span>X-Ray</span>
-                  <span>100 PLN</span>
-                  <span>PET/CT (Positron Emission Tomography/Computed Tomography)</span>
-                  <span>250 PLN</span>
-                  <span>Radiology Overread Services For Medical Diagnostic and Legal Overreads</span>
-                  <span>350 PLN</span>
+              <div className="price-box">
+                <h2>
+                  Preferencyjne ceny Teleragiologii dla Klientów POZYTRON
+                  Radiologia Medyczna:
+                </h2>
+                <div className="table">
+                  <div className="table-header">
+                    <span>Moduł teleradiologii - dostęp dla podmiotu</span>
+                  </div>
+                  <div className="table-body">
+                    <ul>
+                      <li>
+                        Przygotowanie dokumentów do WSSE (procedury szczegółowe,
+                        uprawnienia do opisywania zdjęć, testy specjalistyczne
+                        urządzeń peryferyjnych)
+                        <ul>
+                          <li>
+                            Dostęp do modułu dla współpracujących jednostek
+                          </li>
+                          <li>Radiologiczna gotowość dyżurowa</li>
+                          <li>
+                            Dostęp do funkcji RIS w module teleradiologicznym
+                          </li>
+                          <li>Archiwizacja wykonywanych badań</li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        Wsparci ekoordynatora badań w teleradiologii w godz.
+                        8:00 - 16:00
+                        <ul>
+                          <li>Wsparcie IT w godz. 8:00 - 16:00</li>
+                          <li>Serwis oraz aktualizacja modułu</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+              <img src={boxShadow} />
+              <h2>
+                Cena za opis badania stomatologicznego w systemie teleradiologii
+                już od 16 zł za zdjęcie.
+              </h2>
             </div>
-            <img src={boxShadow} />
-            </div>
-            
           </div>
         </div>
       </section>
-      
+
       <footer className="background-gradient">
         <div className="container">
           <div className="wrapper"></div>

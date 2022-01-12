@@ -34,13 +34,13 @@ h1 {
   margin-bottom: 0;
 }
 .hero-container p {
-    margin-bottom: 3rem;
-    padding-right: 30px;
+  margin-bottom: 3rem;
+  padding-right: 30px;
 }
 
 h2 {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.7rem;
 }
 .container {
   width: 100%;
@@ -172,12 +172,9 @@ input:focus {
   width: 100%;
 }
 .price-box {
-  background: linear-gradient(0deg, #d3dde4, #fefefe);
-  border-radius: 20px;
-  padding: 15px 40px 40px;
 }
-.price-section{
-    padding: 50px 0;
+.price-section {
+  padding: 50px 0;
 }
 .hero p {
   font-size: 1rem;
@@ -188,42 +185,52 @@ input:focus {
   margin-left: auto;
   margin-top: 3rem;
 }
-
+.table {
+  background: #e5eaee;
+  border-radius: 20px;
+}
 .table-header {
   font-weight: 700;
-    display: grid;
-    grid-template-columns: 1fr 80px;
-    border-top: 1px solid #99999985;
-    border-right: 1px solid #99999985;
-    background: #2a4455;
-    color: #fff;
+  background: #2a4455;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
 }
 
 .table-body {
-  display: grid;
-  grid-template-columns: 1fr 80px;
-  border-top: 1px solid #99999985;
-    border-right: 1px solid #99999985;
   color: #3d7088;
+  padding: 25px 0;
 }
 
 .table-body span:nth-child(2n) {
   font-weight: 700;
 }
 .table-body span {
-  border-left: 1px solid #99999985;
-  border-bottom: 1px solid #99999985;
   padding: 4px 8px;
 }
 
 .table-header span {
-  border-left: 1px solid #99999985;
-  padding: 4px 8px;
+  padding: 25px;
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 .pricebox-wrapper img {
   width: calc(100% - 24px);
   margin: auto;
   display: block;
+}
+.pricebox-wrapper {
+  max-width: 600px;
+  margin: auto;
+  width: 100%;
+}
+
+.table-body ul {
+  margin: 0;
+  padding: 0 40px;
+}
+.section {
+  padding: 50px 0;
 }
 @media (min-width: 770px) {
   .img-logo {
@@ -235,7 +242,13 @@ input:focus {
   .form-box {
     margin-left: auto;
     margin-top: 3rem;
-}
+  }
+  .form-item {
+    flex-wrap: nowrap;
+  }
+  input {
+    width: calc(100% - 80px);
+  }
   h1 {
     font-size: 3rem;
     line-height: 3.5rem;
@@ -244,12 +257,13 @@ input:focus {
   h2 {
     font-size: 1.5rem;
     line-height: 2rem;
-    
   }
-  .hero-container > div {flex: 1;}
+  .hero-container > div {
+    flex: 1;
+  }
 
-.hero p {
+  .hero p {
     font-size: 1.5rem;
     line-height: 2rem;
-}
+  }
 }
