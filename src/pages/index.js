@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
 import "./style.css";
 import boxShadow from "../images/box-shadow.webp";
+import { Helmet } from "react-helmet";
 // markup
 const IndexPage = ({ data }) => {
   React.useEffect(() => {
@@ -19,6 +20,16 @@ const IndexPage = ({ data }) => {
   ]);
   return (
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Teleradiologia - zdalne opisywanie cyfrowych zdjęć stomatologicznych.
+        </title>
+        <meta
+          name="description"
+          content="Nie musisz zatrudniać radiologa do opisu zdjęć. Skorzystaj z usług zdalnej teleradiologii! Bądź profesjonalny i wyprzedź konkurencję!"
+        />
+      </Helmet>
       <header className="background-gradient">
         <div className="container">
           <div className="wrapper">
@@ -52,7 +63,7 @@ const IndexPage = ({ data }) => {
                       </h2>
                       <form
                         action="https://app.getresponse.com/add_subscriber.html"
-                        accept-charset="utf-8"
+                        acceptCharset="utf-8"
                         method="post"
                       >
                         <div className="form-item">

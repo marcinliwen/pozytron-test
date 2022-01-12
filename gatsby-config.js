@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "pozytron-test",
+    title: "Teleradiologia - zdalne opisywanie cyfrowych zdjęć stomatologicznych",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.ico",
       },
     },
     "gatsby-plugin-sharp",
