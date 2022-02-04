@@ -18,6 +18,8 @@ const IndexPage = ({ data }) => {
       image: getImage(data.smallImage),
     },
   ]);
+  const banner = getImage(data.banner);
+  const mapa =  getImage(data.mapa);
   return (
     <main>
       <Helmet>
@@ -36,7 +38,7 @@ const IndexPage = ({ data }) => {
             <StaticImage
               className="img-logo"
               alt="logo"
-              src="../images/logo.webp"
+              src="../images/logo.png"
             />
           </div>
         </div>
@@ -44,15 +46,14 @@ const IndexPage = ({ data }) => {
       <section className="hero">
         <div className="container hero-content">
           <div className="wrapper">
-            <p className="hero-title">Teleradiologia</p>
-            <h1>ZDALNE OPISYWANIE CYFROWYCH ZDJĘĆ STOMATOLOGICZNYCH</h1>
             <div className="hero-container">
               <div>
-                <p>
-                  Nie musisz zatrudniać radiologa do opisu zdjęć. Skorzystaj z
-                  usług zdalnej teleradiologii! Bądź profesjonalny i wyprzedź
-                  konkurencję!
-                </p>
+                {/* <p className="hero-title">Teleradiologia</p> */}
+                <h1>
+                  Zdalna praca{" "}
+                  <span>przy opisywaniu zdjęć radiologicznych</span>
+                </h1>
+                <GatsbyImage image={banner} alt="teleradiologia" />
               </div>
               <div>
                 <div className="form-box">
@@ -69,7 +70,7 @@ const IndexPage = ({ data }) => {
                       >
                         <div className="form-item">
                           <label>Imię</label>
-                          <input type="text" name="first_name"  required />
+                          <input type="text" name="first_name" required />
                         </div>
                         <div className="form-item">
                           <label>Nazwisko</label>
@@ -83,7 +84,11 @@ const IndexPage = ({ data }) => {
                           <label>Email</label>
                           <input type="text" name="email" required />
                         </div>
-                        <input type="hidden" name="thankyou_url" value="https://pozytron-test.netlify.app"/>
+                        <input
+                          type="hidden"
+                          name="thankyou_url"
+                          value="https://pozytron-test.netlify.app"
+                        />
                         <input
                           type="hidden"
                           name="campaign_token"
@@ -97,9 +102,17 @@ const IndexPage = ({ data }) => {
                       </form>
                     </div>
                   </div>
-                  <img src={boxShadow} />
                 </div>
+               
               </div>
+              <div className="full-width bg-gradient-grey">
+                  <h2>Pracuj gdziekolwiek jesteś w dowolnym wymiarze godzin.</h2>
+                </div>
+                <div className="full-width bg-gradient-red">
+                 <span>
+                 Jeśli jesteś <strong>lekarzem radiologiem</strong> lub posiadasz <strong>uprawnienia do opisywania zdjęć radiologicznych</strong>  
+</span><span>to zapraszamy Ciebie do współpracy.</span> 
+                </div>
             </div>
           </div>
         </div>
@@ -110,48 +123,29 @@ const IndexPage = ({ data }) => {
       <section className="section">
         <div className="container">
           <div className="wrapper">
-            <h2>Korzyści które uzyskasz z wdrożenia modułu Teleradiologii:</h2>
+            <div className='f-column'>
+            <h2>Zacznij współpracę z podmiotem, który ma na swoim koncie:</h2>
             <ul>
               <li>
-                Przygotujemy dla Ciebie wszystkie dokumenty do WSSE wymagane
-                przepisami prawa (procedury szczegółowe, dokumenty uprawniające
-                do opisu zdjęć, test specjalistyczne urządzeń peryferyjnych).
+              ponad 2 mln opisów badań radiologicznych TK, RTG, MR, MG, CBCT, PANTOMOGRAFII
               </li>
               <li>
-                Otrzymasz dostęp do aplikacji szyfrowanego przesyłania zdjęć w
-                formacie DICOM.
+              ponad 10 lat doświadczenia
               </li>
               <li>
-                Spełnisz wymogi prawa w zakresie posiadania umowy z lekarzem
-                radiologiem w obszarze oceny radiologicznej wykonywanych badań
-                obrazowych.
-              </li>
-              <li>
-                Uzyskasz możliwość wysłania i konsultacji wykonanego badania z
-                lekarzem radiologiem bezpośrednio w systemie.
-              </li>
-              <li>
-                Będziesz mieć możliwość tworzenia kont dla podmiotów z Tobą
-                współpracujących / lekarzy kierujących pacjentów na diagnostykę
-                obrazową stomatologiczną (funkcja systemu RIS umożliwiająca
-                wystawienie zlecenia, przesłanie go do placówki wykonującej
-                badanie radiologiczne wraz ze zwrotnym odesłaniem wykonanych
-                obrazów w czasie rzeczywistym);
-              </li>
-              <li>
-                Możliwość archiwizacji wykonywanych badań w systemie PACS
-                stanowiącym integralną część modułu teleradiologicznego (brak
-                konieczności posiadania własnych serwerów).
-              </li>
-              <li>
-                Możliwość zarządzania wszystkimi pacjentami oraz wykonanymi
-                badaniami obrazowymi dzięki funkcji systemu RIS.
+              stałą współpracę z ponad 45 lekarzami radiologami
               </li>
             </ul>
+            <div className="subtitle"><h3>komfort pracy w domu</h3></div>
+            
+            </div>
+            <div>
+            <GatsbyImage image={mapa} alt="mapa" />
+            </div>
           </div>
         </div>
       </section>
-      <section className="price-section">
+   {/*    <section className="price-section">
         <div className="container">
           <div className="wrapper">
             <div className="pricebox-wrapper">
@@ -202,7 +196,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <footer className="background-gradient">
         <div className="container">
@@ -217,14 +211,24 @@ export default IndexPage;
 
 export const data = graphql`
   query {
-    largeImage: file(relativePath: { eq: "dental-desktop.png" }) {
+    largeImage: file(relativePath: { eq: "hero-bg.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, quality: 100)
       }
     }
-    smallImage: file(relativePath: { eq: "dental-mobile.png" }) {
+    smallImage: file(relativePath: { eq: "hero-bg-mobile.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+      }
+    }
+    banner: file(relativePath: { eq: "teleradio.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, quality: 100)
+      }
+    }
+    mapa: file(relativePath: { eq: "mapa.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, quality: 100)
       }
     }
   }
